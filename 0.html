@@ -41,7 +41,7 @@
             height: -webkit-fill-available;
             max-height: 100vh;
             overflow-x: auto;
-            overflow-y: hidden;
+            overflow-y: auto;
         }
 
         .b-example-divider {
@@ -258,38 +258,128 @@
 
     <div class="b-example-divider"></div>
 
-    <div class="container">
-        <header>
-            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-                <h1 class="display-4 fw-normal text-body-emphasis">Главная</h1>
-                <p class="fs-5 text-body-secondary">Вы находитесь на сайте, предназначенном для продажи товаров</p>
-            </div>
-        </header>
+    <header>
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal text-body-emphasis">Главная</h1>
+            <p class="fs-5 text-body-secondary">Вы находитесь на сайте, предназначенном для продажи товаров</p>
+        </div>
+    </header>
 
-        <main class="row">
-            <div class="row text-center">
-                <div class="col-4">
-                    <div class="card mb-4 rounded-3 shadow-sm">
-                        <div class="card-header py-3">
-                            <h4 class="my-0 fw-normal">Товар 1</h4>
-                        </div>
-                        <div class="card-body">
-                            <h2 class="card-title pricing-card-title">$100</h2>
-                            <p>
-                                10 users included,
-                                2 GB of storage,
-                                Email support,
-                                Help center access
-                            </p>
-                            <button type="button" class="btn btn-success">Купить</button>
-                        </div>
+
+
+
+    <main class="row">
+        <div class="row text-center">
+            <div class="col-4">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Товар 1</h4>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title pricing-card-title">$100</h2>
+                        <p>
+                            10 users included,
+                            2 GB of storage,
+                            Email support,
+                            Help center access
+                        </p>
+                        <button type="button" class="w-100 btn btn-lg btn-success">Купить</button>
                     </div>
                 </div>
             </div>
-        </main>
 
-    </div>
+            <div class="col-4">
+                <input type="text" class="form-control" placeholder="Имя" aria-label="Имя" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" placeholder="E-mail" aria-label="E-mail" aria-describedby="addon-wrapping">
+                <button class="btn btn-primary" type="submit">Отправить</button>
+            </div>
+        </div>
+        <div class="faq-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal text-body-emphasis">FAQ</h1>
+        </div>
 
+
+        <p class="d-inline-flex gap-1 col-6">
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+                Как купить?
+            </a>
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                Как доставить?
+            </a>
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+                Какая гарантия?
+            </a>
+
+
+        </p>
+        <div class="collapse" id="collapseExample1">
+            <div class="card card-body">
+                Подробный ответ на вопрос 1.
+            </div>
+        </div>
+        <div class="collapse" id="collapseExample2">
+            <div class="card card-body">
+                Подробный ответ на вопрос 2.
+            </div>
+        </div>
+        <div class="collapse" id="collapseExample3">
+            <div class="card card-body">
+                Подробный ответ на вопрос 3.
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">номер</th>
+                <th scope="col">название товара</th>
+                <th scope="col">цена за штуку</th>
+                <th scope="col">количество</th>
+                <th scope="col">итоговая сумма</th>
+                <th scope="col">статус заказа</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-primary">
+                <th scope="row">1</th>
+                <td>Телефон</td>
+                <td>1000</td>
+                <td>2</td>
+                <td>2000</td>
+                <td>новый</td>
+
+            </tr>
+            <tr class="table-warning">
+                <th scope="row">2</th>
+                <td>Патефон</td>
+                <td>50000</td>
+                <td>1</td>
+                <td>50000</td>
+                <td>обработка</td>
+
+            </tr>
+            <tr class="table-success">
+                <th scope="row">3</th>
+                <td>Автомагнитола</td>
+                <td>1200</td>
+                <td>17</td>
+                <td>20400</td>
+                <td>обработан</td>
+
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">4</th>
+                <td>Ноутбук</td>
+                <td>5200</td>
+                <td>2</td>
+                <td>10400</td>
+                <td>отмена</td>
+
+            </tr>
+
+            </tbody>
+        </table>
+    </main>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
